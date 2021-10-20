@@ -11,7 +11,7 @@ import SwiftUI
 struct voice_alarm_shitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocalNotificationShit()
         }
     }
 }

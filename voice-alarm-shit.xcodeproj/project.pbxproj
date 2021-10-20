@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		0B93FF52271F5BE100C5D33C /* voice_alarm_shitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF51271F5BE100C5D33C /* voice_alarm_shitApp.swift */; };
-		0B93FF54271F5BE100C5D33C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF53271F5BE100C5D33C /* ContentView.swift */; };
 		0B93FF56271F5BE200C5D33C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B93FF55271F5BE200C5D33C /* Assets.xcassets */; };
 		0B93FF59271F5BE200C5D33C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B93FF58271F5BE200C5D33C /* Preview Assets.xcassets */; };
+		0B93FF60271F5EA600C5D33C /* LocalNotificationShit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF5F271F5EA600C5D33C /* LocalNotificationShit.swift */; };
+		0B93FF64271F5F0300C5D33C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF63271F5F0300C5D33C /* NotificationManager.swift */; };
+		0B93FF66271F794800C5D33C /* AlarmSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF65271F794800C5D33C /* AlarmSettingView.swift */; };
+		0B93FF68271F7AFA00C5D33C /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF67271F7AFA00C5D33C /* AudioRecorder.swift */; };
+		0B93FF6B271F81B400C5D33C /* RecordingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF6A271F81B400C5D33C /* RecordingsList.swift */; };
+		0B93FF6E271F89CD00C5D33C /* RecordingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF6D271F89CD00C5D33C /* RecordingDataModel.swift */; };
+		0B93FF70271F8BEE00C5D33C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF6F271F8BEE00C5D33C /* Helper.swift */; };
+		0B93FF72271F94B700C5D33C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93FF71271F94B700C5D33C /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B93FF4E271F5BE100C5D33C /* voice-alarm-shit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voice-alarm-shit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B93FF51271F5BE100C5D33C /* voice_alarm_shitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voice_alarm_shitApp.swift; sourceTree = "<group>"; };
-		0B93FF53271F5BE100C5D33C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0B93FF55271F5BE200C5D33C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B93FF58271F5BE200C5D33C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B93FF5F271F5EA600C5D33C /* LocalNotificationShit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationShit.swift; sourceTree = "<group>"; };
+		0B93FF63271F5F0300C5D33C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		0B93FF65271F794800C5D33C /* AlarmSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingView.swift; sourceTree = "<group>"; };
+		0B93FF67271F7AFA00C5D33C /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		0B93FF6A271F81B400C5D33C /* RecordingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsList.swift; sourceTree = "<group>"; };
+		0B93FF6D271F89CD00C5D33C /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
+		0B93FF6F271F8BEE00C5D33C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		0B93FF71271F94B700C5D33C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,9 @@
 		0B93FF50271F5BE100C5D33C /* voice-alarm-shit */ = {
 			isa = PBXGroup;
 			children = (
-				0B93FF51271F5BE100C5D33C /* voice_alarm_shitApp.swift */,
-				0B93FF53271F5BE100C5D33C /* ContentView.swift */,
+				0B93FF62271F5EE200C5D33C /* views */,
+				0B93FF61271F5ED200C5D33C /* services */,
+				0B93FF6C271F89B300C5D33C /* models */,
 				0B93FF55271F5BE200C5D33C /* Assets.xcassets */,
 				0B93FF57271F5BE200C5D33C /* Preview Content */,
 			);
@@ -65,6 +80,44 @@
 				0B93FF58271F5BE200C5D33C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B93FF61271F5ED200C5D33C /* services */ = {
+			isa = PBXGroup;
+			children = (
+				0B93FF63271F5F0300C5D33C /* NotificationManager.swift */,
+				0B93FF67271F7AFA00C5D33C /* AudioRecorder.swift */,
+				0B93FF6F271F8BEE00C5D33C /* Helper.swift */,
+				0B93FF71271F94B700C5D33C /* AudioPlayer.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		0B93FF62271F5EE200C5D33C /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0B93FF69271F819700C5D33C /* components */,
+				0B93FF51271F5BE100C5D33C /* voice_alarm_shitApp.swift */,
+				0B93FF5F271F5EA600C5D33C /* LocalNotificationShit.swift */,
+				0B93FF65271F794800C5D33C /* AlarmSettingView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0B93FF69271F819700C5D33C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0B93FF6A271F81B400C5D33C /* RecordingsList.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		0B93FF6C271F89B300C5D33C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				0B93FF6D271F89CD00C5D33C /* RecordingDataModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B93FF54271F5BE100C5D33C /* ContentView.swift in Sources */,
+				0B93FF60271F5EA600C5D33C /* LocalNotificationShit.swift in Sources */,
+				0B93FF64271F5F0300C5D33C /* NotificationManager.swift in Sources */,
+				0B93FF72271F94B700C5D33C /* AudioPlayer.swift in Sources */,
+				0B93FF6E271F89CD00C5D33C /* RecordingDataModel.swift in Sources */,
 				0B93FF52271F5BE100C5D33C /* voice_alarm_shitApp.swift in Sources */,
+				0B93FF6B271F81B400C5D33C /* RecordingsList.swift in Sources */,
+				0B93FF66271F794800C5D33C /* AlarmSettingView.swift in Sources */,
+				0B93FF68271F7AFA00C5D33C /* AudioRecorder.swift in Sources */,
+				0B93FF70271F8BEE00C5D33C /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +332,7 @@
 				DEVELOPMENT_TEAM = T67M6DRC36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +363,7 @@
 				DEVELOPMENT_TEAM = T67M6DRC36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to conduct recording sessions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
