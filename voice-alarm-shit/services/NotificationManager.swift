@@ -26,8 +26,8 @@ class NotificationManager{
     func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Local Notification Test"
-        content.subtitle = "test"
-        content.sound = .default
+        content.subtitle = "testsss"
+        content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "_2021-10-21 10:48:35.m4a") )
         content.badge = 1
         
         // time

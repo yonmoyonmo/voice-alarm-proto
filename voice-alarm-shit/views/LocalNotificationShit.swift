@@ -14,6 +14,9 @@ struct LocalNotificationShit: View {
                 Button("request permissions") {
                     NotificationManager.instance.requestAuthorization()
                 }
+                Button("test notification") {
+                    NotificationManager.instance.scheduleNotification()
+                }
                 Button("cancel notification") {
                     NotificationManager.instance.cancelNotification()
                 }

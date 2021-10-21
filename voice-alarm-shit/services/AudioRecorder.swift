@@ -30,6 +30,8 @@ class AudioRecorder: NSObject, ObservableObject {
     var recordings = [Recording]()
     
     func startRecording(title: String) {
+        let fileManager = FileManager.default
+        
         let recordingSession = AVAudioSession.sharedInstance()
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
@@ -37,8 +39,16 @@ class AudioRecorder: NSObject, ObservableObject {
         }catch {
             print("failed to set up recording session")
         }
-        let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
+        //test : save file to /Library/Sounds/
+        var documentPath = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)[0]
+        documentPath = documentPath.appendingPathComponent("Sounds")
+        do {
+            try fileManager.createDirectory(at: documentPath, withIntermediateDirectories: false, attributes: nil)
+        }catch let e{
+            print(e.localizedDescription)
+        }
+        //
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let audioFilename = documentPath.appendingPathComponent("\(title)_\(dateFormatter.string(from: Date())).m4a")
@@ -71,7 +81,23 @@ class AudioRecorder: NSObject, ObservableObject {
     func fatchRecordings() {
         recordings.removeAll()
         let fileManager = FileManager.default
-        let documentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        //find files in /Libray/Sounds/
+        var documentDirectory = fileManager.urls(for: .libraryDirectory, in: .userDomainMask)[0]
+        //what's in this array
+        let test = fileManager.urls(for: .libraryDirectory, in: .userDomainMask)
+        for element in test {
+            print(element)
+        }
+        //
+        documentDirectory = documentDirectory.appendingPathComponent("Sounds")
+        //test : make dir /Library/Sounds/
+        do {
+            try fileManager.createDirectory(at: documentDirectory, withIntermediateDirectories: false, attributes: nil)
+        }catch let e{
+            print(e.localizedDescription)
+        }
+        //
+        
         let directoryContents = try! fileManager.contentsOfDirectory(at: documentDirectory, includingPropertiesForKeys: nil)
         
         for audio in directoryContents {
